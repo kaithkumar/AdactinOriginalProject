@@ -5,6 +5,7 @@ package com.mystore.testcases;
 
 import java.util.HashMap;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -44,6 +45,7 @@ public class SearchHotelsPageTest extends BaseClass{
         searchHotel.selectingRooms(hm.get("location"), hm.get("Hotels"), hm.get("Rommtype"), hm.get("No of rooms"), hm.get("Adults"), hm.get("child"));
         Log.info("Search Hotel Page Click Done");
         Log.endTestCase("Search hotel Page");
+        Assert.assertTrue(false);
 	}
 	
 	@AfterMethod(groups = {"smoke", "sanity", "regression"})
